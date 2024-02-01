@@ -1,3 +1,5 @@
+package src.opg2;
+
 import java.util.Arrays;
 
 interface MyTransformingType {
