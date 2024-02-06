@@ -1,4 +1,4 @@
-package src.opg6;
+package week1.opg6;
 
  class Book {
     private String title;

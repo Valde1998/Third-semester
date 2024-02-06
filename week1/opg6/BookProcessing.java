@@ -1,4 +1,4 @@
-package src.opg6;
+package week1.opg6;
 
 import java.util.Arrays;
 import java.util.List;

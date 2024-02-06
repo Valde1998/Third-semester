@@ -1,4 +1,4 @@
-package src.opg3;
+package week1.opg3;
 
 public class Predicate {
 

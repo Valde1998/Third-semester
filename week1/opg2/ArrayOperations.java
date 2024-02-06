@@ -1,4 +1,4 @@
-package src.opg2;
+package week1.opg2;
 
 import java.util.Arrays;
 

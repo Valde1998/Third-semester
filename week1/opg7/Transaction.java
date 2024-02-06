@@ -1,4 +1,4 @@
-package src.opg7;
+package week1.opg7;
 
 class Transaction {
     private int id;
