@@ -1,3 +1,5 @@
+package jsonDTOExercise;
+
 /*
 1: Json stand for JavaScript Object Notation
 
