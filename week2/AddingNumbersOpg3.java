@@ -17,7 +17,6 @@ public class AddingNumbersOpg3 {
         workingJack.shutdown();
 
     }
-// For make it to 1000 we need to make the arraylist to CopyOnWriteArrayList
     private static class IntegerList {
         private static List<Integer> list = new CopyOnWriteArrayList<>();
         public void addCount(int count) {
@@ -26,7 +25,6 @@ public class AddingNumbersOpg3 {
         }
     }
     private static class TaskToAddCount implements Runnable {
-        // Gets a reference to the shared list and the count to add
         private IntegerList integerList;
         private int count;
 
