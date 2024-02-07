@@ -1,0 +1,95 @@
+[
+  {
+    "firstName": "Valdemar",
+    "lastName": "CH",
+    "birthDate": "1990-01-01",
+    "address": {
+      "street": "Møllegade ",
+      "city": "Dragør",
+      "zipCode": 12345
+    },
+    "account": {
+      "id": "123456789",
+      "balance": "1000.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Jensen",
+    "birthDate": "1985-05-15",
+    "address": {
+      "street": "456 Elm St",
+      "city": "Køge",
+      "zipCode": 54321
+    },
+    "account": {
+      "id": "987654321",
+      "balance": "500.00",
+      "isActive": false
+    }
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Jackson",
+    "birthDate": "1978-09-30",
+    "address": {
+      "street": "789 Oak St",
+      "city": "Newyork",
+      "zipCode": 67890
+    },
+    "account": {
+      "id": "456123789",
+      "balance": "2500.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "Alex",
+    "lastName": "Stenmand",
+    "birthDate": "1995-12-10",
+    "address": {
+      "street": "101 Pine St",
+      "city": "Hamletville",
+      "zipCode": 13579
+    },
+    "account": {
+      "id": "789456123",
+      "balance": "750.00",
+      "isActive": true
+    }
+  },
+  {
+    "firstName": "David",
+    "lastName": "Skærbæk",
+    "birthDate": "1982-07-20",
+    "address": {
+      "street": "222 Cedar St",
+      "city": "Forestville",
+      "zipCode": 24680
+    },
+    "account": {
+      "id": "321654987",
+      "balance": "1500.00",
+      "isActive": false
+    }
+
+  },
+  {
+    "firstName": "Hans-Henrik",
+    "lastName": "Storm",
+    "birthDate": "1997-07-20",
+    "address": {
+      "street": "Kurlandsgade 28",
+      "city": "KBH",
+      "zipCode": 23835
+    },
+    "account": {
+      "id": "535624858",
+      "balance": "1600.00",
+      "isActive": false
+    }
+
+  }
+]
+
