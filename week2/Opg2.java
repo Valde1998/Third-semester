@@ -2,7 +2,7 @@ public class Opg2 {
     public static void main(String[] args) {
         Counter counter = new Counter();
         Thread thread1 = new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 1000; i++) {
                 counter.increment();
                 System.out.println("Thread 1: Count = " + counter.getCount());
                 try {
@@ -14,11 +14,11 @@ public class Opg2 {
         });
 
         Thread thread2 = new Thread(() -> {
-            for (int i = 0; i < 100; i++) {
+            for (int i = 0; i < 1000; i++) {
                 counter.increment();
                 System.out.println("Thread 2: Count = " + counter.getCount());
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
