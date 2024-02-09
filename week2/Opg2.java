@@ -1,4 +1,4 @@
-public class Opg2 extends Thread {
+public class Opg2 {
     public static void main(String[] args) {
         Counter counter = new Counter();
         Thread thread1 = new Thread(() -> {
