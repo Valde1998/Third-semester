@@ -5,11 +5,11 @@ public class Opg2 {
             for (int i = 0; i < 1000; i++) {
                 counter.increment();
                 System.out.println("Thread 1: Count = " + counter.getCount());
-                try {
-                    Thread.sleep(50);
+               /* try {
+                    Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
         });
 
@@ -17,19 +17,21 @@ public class Opg2 {
             for (int i = 0; i < 1000; i++) {
                 counter.increment();
                 System.out.println("Thread 2: Count = " + counter.getCount());
-                try {
+              /*  try {
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
             }
         });
 
-        thread1.start();
-        thread2.start();
+      //  thread1.start();
+      //  thread2.start();
 
         try {
+            thread1.start();
             thread1.join();
+            thread2.start();
             thread2.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
