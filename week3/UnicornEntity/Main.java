@@ -22,10 +22,15 @@ public class Main {
         System.out.println("Updated name: "+updated.getName());
 
         Unicorn found2 = unicornDAO.findById(1);
+
         found2.setName("TEST");
+
         Unicorn updated2 = unicornDAO.update(found2,found2.getId());
+
         System.out.println("Name for test is now: "+updated2.getName());
+
         List<Unicorn> unicorns = unicornDAO.findALl();
+
         unicorns.forEach(System.out::println);
 
         unicornDAO.close();
