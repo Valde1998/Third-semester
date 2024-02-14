@@ -8,7 +8,6 @@ import jakarta.persistence.TypedQuery;
 import java.util.List;
 
 public class Main {
-
     static EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
     public static void main(String[] args) {
         EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
@@ -20,7 +19,7 @@ public class Main {
             Point p = new Point(i, i);
             pDAO.savePoint(p);
         }
-        
+
         System.out.println(pDAO.totalPoints());
         System.out.println(pDAO.getAveragePoints());
 
