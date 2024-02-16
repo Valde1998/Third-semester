@@ -31,8 +31,7 @@ public class StudentDAO {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Student student = findById(id);
-        if (student != null)
-        {
+        if (student != null) {
             em.remove(student);
         }
         em.getTransaction().commit();
