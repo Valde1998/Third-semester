@@ -1,4 +1,4 @@
-package UnicornEntity;
+package UnicornExercise;
 
 import jakarta.persistence.*;
 import lombok.Getter;
