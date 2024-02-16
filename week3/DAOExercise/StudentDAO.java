@@ -9,8 +9,7 @@ import java.util.List;
 public class StudentDAO {
     private EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig();
 
-    public Student save(Student student)
-    {
+    public Student save(Student student) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         em.persist(student);
@@ -19,8 +18,7 @@ public class StudentDAO {
         return student;
     }
 
-    public Student update(Student student)
-    {
+    public Student update(Student student) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Student updatedStudent = em.merge(student);
@@ -29,8 +27,7 @@ public class StudentDAO {
         return updatedStudent;
     }
 
-    public void delete(int id)
-    {
+    public void delete(int id) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
         Student student = findById(id);
@@ -42,16 +39,14 @@ public class StudentDAO {
         em.close();
     }
 
-    public Student findById(int id)
-    {
+    public Student findById(int id) {
         EntityManager em = emf.createEntityManager();
         Student foundStudent = em.find(Student.class, id);
         em.close();
         return foundStudent;
     }
 
-    public List<Student> findAll()
-    {
+    public List<Student> findAll() {
         EntityManager em = emf.createEntityManager();
         TypedQuery<Student> query = em.createQuery("SELECT s FROM Student s", Student.class);
         List<Student> students = query.getResultList();
