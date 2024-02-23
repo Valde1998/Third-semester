@@ -12,7 +12,7 @@ public class Main {
         EntityManagerFactory emf = HibernateConfig.getEntityManagerFactoryConfig("student_db",false);
         EntityManager em = emf.createEntityManager();
 
-        //SETUP ENTITIES
+
         Semester semester1 = new Semester("Fall 2022", "Fall semester 2022");
         Semester semester2 = new Semester("Spring 2023", "Spring semester 2023");
         Semester semester3 = new Semester("Summer 2023", "Summer semester 2023");
@@ -32,7 +32,7 @@ public class Main {
         semester2.addStudent(student3);
         semester3.addStudent(student4);
 
-        //PERSIST ENTITIES
+
         try {
             em.getTransaction().begin();
             em.persist(semester1);
