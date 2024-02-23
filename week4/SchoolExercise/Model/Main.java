@@ -13,16 +13,16 @@ public class Main {
         EntityManager em = emf.createEntityManager();
 
         //SETUP ENTITIES
-        Semester semester1 = new Semester("Spring 2021", "Spring semester 2021");
-        Semester semester2 = new Semester("Fall 2021", "Fall semester 2021");
-        Semester semester3 = new Semester("Spring 2022", "Spring semester 2022");
-        Student student1 = new Student("John", "Doe");
-        Student student2 = new Student("Jane", "Doe");
-        Student student3 = new Student("John", "Smith");
-        Student student4 = new Student("Jane", "Smith");
-        Teacher teacher1 = new Teacher("Hansi", "Hinterseer");
-        Teacher teacher2 = new Teacher("Kenni", "Kern");
-        Teacher teacher3 = new Teacher("Foobar", "Baz");
+        Semester semester1 = new Semester("Fall 2022", "Fall semester 2022");
+        Semester semester2 = new Semester("Spring 2023", "Spring semester 2023");
+        Semester semester3 = new Semester("Summer 2023", "Summer semester 2023");
+        Student student1 = new Student("David", "Johnson");
+        Student student2 = new Student("Samantha", "Brown");
+        Student student3 = new Student("Ethan", "Miller");
+        Student student4 = new Student("Ava", "Garcia");
+        Teacher teacher1 = new Teacher("Michael", "Thompson");
+        Teacher teacher2 = new Teacher("Jessica", "Anderson");
+        Teacher teacher3 = new Teacher("Jacob", "Lee");
         semester1.addTeacher(teacher1);
         semester1.addTeacher(teacher2);
         semester2.addTeacher(teacher2);
