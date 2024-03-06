@@ -18,7 +18,7 @@ public class Main {
     public static Map<Integer, PatientDTO> patients = new HashMap<>();
 
     public static void main(String[] args) {
-        Javalin app = Javalin.create().start(7007);
+        Javalin app = Javalin.create().start(7070);
         app.before(ctx -> {
             app.attribute("testAttribute", "Hello :)");
             System.out.println(ctx.req());
