@@ -2,9 +2,6 @@ package veterinarien.DTOs;
 
 import lombok.*;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @ToString

@@ -2,9 +2,6 @@ package veterinarien.DTOs;
 
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Getter
 @Setter
 @ToString
@@ -17,6 +14,5 @@ public class PatientDTO {
     private String name;
     private String[] allergies;
     private String[] medications;
-
 
 }

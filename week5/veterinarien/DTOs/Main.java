@@ -1,6 +1,5 @@
 package veterinarien.DTOs;
 
-
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
 import veterinarien.Controller.AppointmentController;
@@ -12,7 +11,6 @@ import java.util.*;
 import static io.javalin.apibuilder.ApiBuilder.*;
 
 public class Main {
-
 
     public static Map<Integer, AppointmentDTO> appointments = new LinkedHashMap<>();
     public static Map<Integer, PatientDTO> patients = new HashMap<>();
@@ -28,7 +26,6 @@ public class Main {
             System.out.println(app.attribute("testAttribute").toString());
             System.out.println(ctx.res());
         });
-
 
         //create patients:
         PatientDTO patient1 = new PatientDTO(1, "Samantha", new String[]{"Cat dander", "Pollen"}, new String[]{"Penicillin"});
@@ -52,10 +49,8 @@ public class Main {
         appointments.put(3, appointment3);
         appointments.put(4, appointment4);
 
-
         app.routes(appointmentRessource());
         app.routes(patientRessource());
-
 
     }
 

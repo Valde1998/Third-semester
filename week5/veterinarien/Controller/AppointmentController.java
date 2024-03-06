@@ -1,19 +1,16 @@
 package veterinarien.Controller;
 
-
 import io.javalin.http.Handler;
 import veterinarien.DTOs.Main;
 
 
 public class AppointmentController {
 
-
     public static Handler getAllAppointments(){
         return ctx -> {
             ctx.json(Main.appointments);
         };
     }
-
 
     public static Handler getAppointmentById(){
         return ctx -> {

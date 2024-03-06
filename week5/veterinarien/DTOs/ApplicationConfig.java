@@ -29,7 +29,6 @@ public class ApplicationConfig {
         return appConfig;
     };
 
-
     public ApplicationConfig setRoutes(EndpointGroup routes){
         app.routes(routes);
         return appConfig;
@@ -48,8 +47,5 @@ public class ApplicationConfig {
         });
         return appConfig;
     }
-
-
-
 
 }
