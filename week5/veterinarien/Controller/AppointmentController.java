@@ -15,6 +15,10 @@ public class AppointmentController {
         };
     }
 
+    // get=200
+    //post=201
+    //put=200--201
+    //delete=204
     public static Handler getAppointmentById(){
         return ctx -> {
             int id = Integer.parseInt(ctx.pathParam("id"));
