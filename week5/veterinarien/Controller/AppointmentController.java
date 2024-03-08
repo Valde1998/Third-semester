@@ -7,6 +7,9 @@ import veterinarien.DTOs.Main;
 public class AppointmentController {
 
     public static Handler getAllAppointments(){
+        if(Main.appointments.isEmpty()){
+            return ctx -> ctx.status(404);
+        }
         return ctx -> {
             ctx.json(Main.appointments);
         };
