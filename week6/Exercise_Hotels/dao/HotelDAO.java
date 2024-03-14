@@ -1,8 +1,5 @@
 package Exercise_Hotels.dao;
 
-
-
-
 import Exercise_Hotels.model.Hotel;
 import Exercise_Hotels.model.Room;
 import jakarta.persistence.EntityManager;
@@ -57,7 +54,5 @@ public class HotelDAO extends DAO<Hotel> {
         }
 
     }
-
-
 
 }

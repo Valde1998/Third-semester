@@ -1,6 +1,5 @@
 package Exercise_Hotels.controllers;
 
-
 import io.javalin.http.Handler;
 import io.javalin.http.HttpStatus;
 import jakarta.persistence.EntityManagerFactory;
@@ -13,10 +12,7 @@ import Exercise_Hotels.model.Room;
 
 import java.util.*;
 
-
 public class HotelController {
-
-
 
     EntityManagerFactory emf;
 

@@ -32,8 +32,6 @@ public class HotelDTO {
         this.address = hotel.getAddress();
     }
 
-
-
     public static Set<HotelDTO> getEntities(List<Hotel> hotels) {
         return hotels.stream().map(hotel -> new HotelDTO(hotel)).collect(Collectors.toSet());
     }

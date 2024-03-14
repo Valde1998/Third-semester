@@ -12,8 +12,6 @@ public abstract class DAO<T> implements IDAO<T> {
         this.emf = emf;
     }
 
-
-
     public abstract List<T> getAll();
     public abstract T getById(int id);
 

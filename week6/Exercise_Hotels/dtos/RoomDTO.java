@@ -25,7 +25,6 @@ public class RoomDTO {
 
     private double price;
 
-
     public RoomDTO(Room room) {
         this.id = room.getId();
         this.hotelId = room.getHotel().getId();

@@ -24,7 +24,6 @@ public class Main {
 
 
         IDAO hotelIDAO = new HotelDAO(emf);
-        IDAO roomDAO = new RoomDAO(emf);
 
         Hotel hotel = new Hotel("Hotel 1", "address 1");
 
@@ -39,7 +38,6 @@ public class Main {
         hotelTest.addRoom(roomTest);
 
         hotelIDAO.create(hotelTest);
-
 
         System.out.println("\n---ALL HOTELS---");
         List<Hotel> allHotels = hotelIDAO.getAll();
