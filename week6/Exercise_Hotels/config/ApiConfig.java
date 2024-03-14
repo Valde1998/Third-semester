@@ -1,6 +1,5 @@
 package Exercise_Hotels.config;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
 import io.javalin.apibuilder.EndpointGroup;
@@ -8,7 +7,6 @@ import io.javalin.apibuilder.EndpointGroup;
 import static io.javalin.apibuilder.ApiBuilder.path;
 
 public class ApiConfig {
-
 
     private ObjectMapper objectMapper = new ObjectMapper();
     private static ApiConfig instance;
