@@ -1,4 +1,4 @@
-package Exercise_Hotels.config;
+package Exercise_Hotels.dao;
 
 
 import Exercise_Hotels.model.Hotel;
@@ -24,8 +24,8 @@ public class HibernateConfig {
             Configuration configuration = new Configuration();
 
             Properties props = new Properties();
-            String connctionURL = String.format("jdbc:postgresql://localhost:5432/%s?currentSchema=public", dbName);
-            props.put("hibernate.connection.url", connctionURL);
+            String connectionURL = String.format("jdbc:postgresql://localhost:5432/%s?currentSchema=public", dbName);
+            props.put("hibernate.connection.url", connectionURL);
             props.put("hibernate.connection.username", "postgres");
             props.put("hibernate.connection.password", "postgres");
             props.put("hibernate.show_sql", "false"); // show sql in console

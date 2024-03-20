@@ -5,6 +5,7 @@ import Exercise_Hotels.model.Room;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
+
 import java.util.List;
 
 public class HotelDAO extends DAO<Hotel> {
@@ -12,8 +13,6 @@ public class HotelDAO extends DAO<Hotel> {
     public HotelDAO(EntityManagerFactory emf) {
         super(emf);
     }
-
-
     public Hotel create (Hotel entity){
         try (EntityManager em = emf.createEntityManager()) {
             em.getTransaction().begin();
@@ -36,7 +35,7 @@ public class HotelDAO extends DAO<Hotel> {
     }
 
     @Override
-    public Hotel getById(int id) {
+    public Hotel getById(Long id) {
 
         try(var em = emf.createEntityManager()){
             Hotel hotel = em.find(Hotel.class, id);
@@ -52,7 +51,25 @@ public class HotelDAO extends DAO<Hotel> {
 
             return query.getResultList();
         }
-
     }
+
+    public Hotel update(Hotel entity){
+        try (var em = emf.createEntityManager()) {
+
+            em.getTransaction().begin();
+            //Hotel hotelFromDBToUpdate = em.find(Hotel.class, id);
+            //hotelFromDBToUpdate.setHotelName(entity.getHotelName());
+            //hotelFromDBToUpdate.setAddress(entity.getAddress());
+            em.merge(entity);
+            em.getTransaction().commit();
+
+            Long idFromUpdatedEntity = entity.getId();
+            Hotel hotelUpdated = em.find(Hotel.class, idFromUpdatedEntity);
+
+            return hotelUpdated;
+        }
+    };
+
+
 
 }

@@ -13,15 +13,8 @@ public abstract class DAO<T> implements IDAO<T> {
     }
 
     public abstract List<T> getAll();
-    public abstract T getById(int id);
+    public abstract T getById(Long id);
 
-    public void update(T entity){
-        try (var em = emf.createEntityManager()) {
-            em.getTransaction().begin();
-            em.merge(entity);
-            em.getTransaction().commit();
-        }
-    };
     public void delete(T entity){
         try (var em = emf.createEntityManager()) {
             em.getTransaction().begin();

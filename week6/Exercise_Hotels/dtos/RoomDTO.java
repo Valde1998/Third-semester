@@ -32,6 +32,8 @@ public class RoomDTO {
         this.price = room.getPrice();
     }
 
+
+
     public static Set<RoomDTO> getEntities (List<Room> rooms){
 
         return rooms.stream().map(room -> new RoomDTO(room)).collect(Collectors.toSet());

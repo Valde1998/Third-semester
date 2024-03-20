@@ -1,18 +1,16 @@
 package Exercise_Hotels;
 
+import Exercise_Hotels.apiEndpoints.Endpoints;
 import Exercise_Hotels.config.ApiConfig;
-import Exercise_Hotels.config.HibernateConfig;
-import Exercise_Hotels.controllers.HotelController;
+import Exercise_Hotels.dao.HibernateConfig;
 import Exercise_Hotels.dao.HotelDAO;
 import Exercise_Hotels.dao.IDAO;
 import Exercise_Hotels.dao.RoomDAO;
 import Exercise_Hotels.model.Hotel;
 import Exercise_Hotels.model.Room;
-import io.javalin.apibuilder.EndpointGroup;
 import jakarta.persistence.EntityManagerFactory;
 
-import java.util.*;
-import static io.javalin.apibuilder.ApiBuilder.*;
+import java.util.List;
 
 public class Main {
 
@@ -24,22 +22,24 @@ public class Main {
 
 
         IDAO hotelIDAO = new HotelDAO(emf);
+        IDAO roomDAO = new RoomDAO(emf);
 
-        Hotel hotel = new Hotel("Hotel 1", "address 1");
+        Hotel hotel = new Hotel("Hotel 1", " Address 1");
 
-        Room room = new Room(1, 1000.00);
+        Room room = new Room(1, 1500.00);
         hotel.addRoom(room);
 
         hotelIDAO.create(hotel);
 
-        Room roomTest = new Room(5, 1500.00);
+        Room roomTest = new Room(2, 1100.00);
 
         Hotel hotelTest = new Hotel("Test", "Tester street 1");
         hotelTest.addRoom(roomTest);
 
         hotelIDAO.create(hotelTest);
 
-        System.out.println("\n---ALL HOTELS---");
+
+        System.out.println("\nALL HOTELS");
         List<Hotel> allHotels = hotelIDAO.getAll();
         allHotels.forEach(System.out::println);
 
@@ -47,28 +47,14 @@ public class Main {
         List<Room> rooms = hotelDAO.getAllRoomsFromHotelByHotelId(2);
         rooms.forEach(System.out::println);
 
+
         ApiConfig
                 .getInstance()
                 .initiateServer()
                 .errorHandling()
                 .startServer(7070)
-                .setRoutes(hotelsAndRooms());
-    }
-
-    private static EndpointGroup hotelsAndRooms() {
-        HotelController hotelController = new HotelController(emf);
-        return () -> {
-            path("/hotels", () -> {
-                get("/", hotelController.getAll());
-                get("/{id}", hotelController.getById());
-                get("/{id}/rooms", hotelController.getRoomsFromHotelByHotelId());
-                post("/", hotelController.createHotel());
-            });
-        };
+                .setRoutes(Endpoints.hotels(emf))
+                .setRoutes(Endpoints.rooms(emf));
     }
 
 }
-
-   
-
-   

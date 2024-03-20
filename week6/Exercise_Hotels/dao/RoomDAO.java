@@ -33,10 +33,27 @@ public class RoomDAO extends DAO<Room> {
     }
 
     @Override
-    public Room getById(int id) {
+    public Room getById(Long id) {
 
         try(var em = emf.createEntityManager()){
             return em.find(Room.class, id);
+        }
+    }
+
+    public Room update(Room entity){
+        try (var em = emf.createEntityManager()) {
+
+            em.getTransaction().begin();
+            //Room roomFromDBToUpdate = em.find(Room.class, id);
+            //roomFromDBToUpdate.setHotel(entity.getHotel());
+            //roomFromDBToUpdate.setNumber(entity.getNumber());
+            //roomFromDBToUpdate.setPrice(entity.getPrice());
+            em.merge(entity);
+            em.getTransaction().commit();
+
+            Long idFromUpdatedEntity = entity.getId();
+            return em.find(Room.class, idFromUpdatedEntity);
+
         }
     }
 
