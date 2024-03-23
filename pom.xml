@@ -15,6 +15,9 @@
         <kotlin.version>1.9.22</kotlin.version>
         <hibernate-version>6.2.4.Final</hibernate-version>
         <junit.version>5.9.1</junit.version>
+
+        <jwt.version>9.0.1</jwt.version>
+        <jbcrypt.version>0.4</jbcrypt.version>
     </properties>
 
     <dependencies>
@@ -120,6 +123,18 @@
             <artifactId>junit-jupiter-params</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>${jbcrypt.version}</version>
+        </dependency>
+        <dependency>
+            <!--  https://nimbusds.com/products/nimbus-jose-jwt   -->
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>${jwt.version}</version>
         </dependency>
 
     </dependencies>
